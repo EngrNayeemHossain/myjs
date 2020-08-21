@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="alert('100')">Exploring JavaScript</h1>
+    <button id="first">Click-1</button>
+    <button id='second'>Click-2</button>
+    <button id="third">Click-3</button>
+    <button id="forth">Click-4</button>
+    <script>
+        function handed(){
+            document.body.style.backgroundColor='cyan';
+        }
+        const secondBtn=document.getElementById('second');
+        secondBtn.onclick=handed;
+
+        const thirdBtn=document.getElementById('third');
+        thirdBtn.onclick=function(){
+            console.log('third btn clicked');
+        }
+
+        function hunded(){
+            document.body.style.backgroundColor='tomato';
+        }
+        const forthBtn=document.getElementById('forth');
+        forthBtn.addEventListener('click',hunded);
+
+        document.getElementById('first').addEventListener('click',function(){
+            document.body.style.backgroundColor='green';
+        })
+        
+    </script>
+</body>
+</html>
